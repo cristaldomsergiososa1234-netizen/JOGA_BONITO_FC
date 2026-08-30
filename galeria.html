@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Galería - Joga Bonito FC</title>
+
+<link rel="stylesheet" href="css/galeria.css">
+
+</head>
+
+<body>
+
+
+<!-- =============================== -->
+<!-- OVERLAY -->
+<!-- =============================== -->
+
+<div class="overlay" id="overlay"></div>
+
+
+<!-- =============================== -->
+<!-- MENÚ LATERAL -->
+<!-- =============================== -->
+
+<nav class="sidebar" id="sidebar">
+
+    <h2>Joga Bonito FC</h2>
+
+    <ul>
+
+        <li>
+            <a href="menu.html">🏠 Inicio</a>
+        </li>
+
+        <li>
+            <a href="plantel.html">👥 Plantel</a>
+        </li>
+
+        <li>
+            <a href="partidos.html">📅 Partidos</a>
+        </li>
+
+        <li>
+            <a href="torneos.html">🏆 Torneos</a>
+        </li>
+
+        <li>
+            <a href="estadisticas.html">📊 Estadísticas</a>
+        </li>
+
+        <li>
+            <a href="joga_bonito_tv.html">📺 Joga Bonito TV</a>
+        </li>
+
+        <li>
+            <a href="galeria.html">📸 Galería</a>
+        </li>
+
+        <li>
+            <a href="noticias.html">📰 Noticias</a>
+        </li>
+
+    </ul>
+
+</nav>
+
+
+<!-- =============================== -->
+<!-- HEADER -->
+<!-- =============================== -->
+
+<header>
+
+    <div class="menu-btn" id="menuBtn">
+        ☰
+    </div>
+
+    <h1>
+        JOGA BONITO FC
+    </h1>
+
+</header>
+
+
+<!-- =============================== -->
+<!-- CONTENIDO -->
+<!-- =============================== -->
+
+<main>
+
+
+    <!-- TÍTULO -->
+
+    <section class="titulo-seccion">
+
+        <h2>
+            📸 Galería
+        </h2>
+
+        <p>
+            Los mejores momentos de Joga Bonito FC.
+        </p>
+
+    </section>
+
+
+    <!-- =============================== -->
+    <!-- FILTROS -->
+    <!-- =============================== -->
+
+    <div class="filtros">
+
+        <button class="filtro activo" data-filtro="todos">
+            Todos
+        </button>
+
+        <button class="filtro" data-filtro="partidos">
+            ⚽ Partidos
+        </button>
+
+        <button class="filtro" data-filtro="entrenamientos">
+            🏃 Entrenamientos
+        </button>
+
+        <button class="filtro" data-filtro="equipo">
+            👥 Equipo
+        </button>
+
+        <button class="filtro" data-filtro="momentos">
+            🏆 Momentos
+        </button>
+
+    </div>
+
+
+    <!-- =============================== -->
+    <!-- GALERÍA -->
+    <!-- =============================== -->
+
+    <section class="galeria">
+
+
+        <!-- FOTO 1 -->
+
+        <div class="foto-card" data-categoria="equipo">
+
+            <img
+                src="img/anonimo.jpg"
+                alt="Joga Bonito FC"
+            >
+
+            <div class="foto-info">
+
+                <h3>
+                    Joga Bonito FC
+                </h3>
+
+                <p>
+                    Nuestro equipo
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- FOTO 2 -->
+
+        <div class="foto-card" data-categoria="partidos">
+
+            <img
+                src="img/anonimo.jpg"
+                alt="Partido Joga Bonito FC"
+            >
+
+            <div class="foto-info">
+
+                <h3>
+                    Día de partido
+                </h3>
+
+                <p>
+                    Joga Bonito FC en acción
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- FOTO 3 -->
+
+        <div class="foto-card" data-categoria="entrenamientos">
+
+            <img
+                src="img/anonimo.jpg"
+                alt="Entrenamiento"
+            >
+
+            <div class="foto-info">
+
+                <h3>
+                    Entrenamiento
+                </h3>
+
+                <p>
+                    Preparándonos para el próximo partido
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- FOTO 4 -->
+
+        <div class="foto-card" data-categoria="partidos">
+
+            <img
+                src="img/anonimo.jpg"
+                alt="Partido"
+            >
+
+            <div class="foto-info">
+
+                <h3>
+                    Partido
+                </h3>
+
+                <p>
+                    Dejándolo todo en la cancha
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- FOTO 5 -->
+
+        <div class="foto-card" data-categoria="momentos">
+
+            <img
+                src="img/anonimo.jpg"
+                alt="Momento especial"
+            >
+
+            <div class="foto-info">
+
+                <h3>
+                    Momento especial
+                </h3>
+
+                <p>
+                    Un recuerdo del equipo
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- FOTO 6 -->
+
+        <div class="foto-card" data-categoria="equipo">
+
+            <img
+                src="img/anonimo.jpg"
+                alt="Jugadores"
+            >
+
+            <div class="foto-info">
+
+                <h3>
+                    La familia
+                </h3>
+
+                <p>
+                    Joga Bonito FC
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+</main>
+
+
+<!-- =============================== -->
+<!-- MODAL DE FOTO -->
+<!-- =============================== -->
+
+<div class="modal" id="modal">
+
+    <div class="modal-contenido">
+
+        <button class="cerrar" id="cerrarModal">
+            ×
+        </button>
+
+        <img id="imagenModal" src="" alt="">
+
+        <div class="modal-texto">
+
+            <h2 id="tituloModal"></h2>
+
+            <p id="descripcionModal"></p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =============================== -->
+<!-- FOOTER -->
+<!-- =============================== -->
+
+<footer>
+
+    <p>
+        Joga Bonito FC — La pasión se vive en la cancha.
+    </p>
+
+</footer>
+
+
+<script src="js/galeria.js"></script>
+
+
+</body>
+
+</html>

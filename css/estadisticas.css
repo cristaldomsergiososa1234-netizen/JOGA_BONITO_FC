@@ -1,0 +1,804 @@
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:linear-gradient(to bottom,#000,#111);
+    color:white;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+}
+
+
+/* =============================== */
+/* HEADER */
+/* =============================== */
+
+header{
+    height:70px;
+    background:#000;
+    border-bottom:2px solid #d4af37;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    position:relative;
+}
+
+.menu-btn{
+    position:absolute;
+    left:20px;
+
+    font-size:28px;
+    cursor:pointer;
+
+    color:#d4af37;
+}
+
+header h1{
+    font-size:1.5rem;
+    color:#d4af37;
+    letter-spacing:2px;
+}
+
+
+/* =============================== */
+/* SIDEBAR */
+/* =============================== */
+
+.sidebar{
+    position:fixed;
+
+    top:0;
+    left:-280px;
+
+    width:280px;
+    height:100%;
+
+    background:#111;
+
+    transition:.3s;
+
+    z-index:3000;
+
+    border-right:2px solid #d4af37;
+}
+
+.sidebar.active{
+    left:0;
+}
+
+.sidebar h2{
+    color:#d4af37;
+
+    text-align:center;
+
+    padding:20px;
+
+    border-bottom:1px solid #333;
+}
+
+.sidebar ul{
+    list-style:none;
+}
+
+.sidebar ul li{
+    padding:18px 25px;
+
+    border-bottom:1px solid #222;
+
+    transition:.2s;
+}
+
+.sidebar ul li:hover{
+    background:#222;
+}
+
+.sidebar ul li a{
+    text-decoration:none;
+
+    color:white;
+
+    display:block;
+}
+
+
+/* =============================== */
+/* OVERLAY */
+/* =============================== */
+
+.overlay{
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:rgba(0,0,0,.5);
+
+    display:none;
+
+    z-index:2500;
+}
+
+.overlay.active{
+    display:block;
+}
+
+
+/* =============================== */
+/* MAIN */
+/* =============================== */
+
+main{
+    flex:1;
+
+    padding:40px 30px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:35px;
+}
+
+
+/* =============================== */
+/* TÍTULO */
+/* =============================== */
+
+.titulo-seccion{
+    width:100%;
+
+    text-align:center;
+}
+
+.titulo-seccion h2{
+    color:#d4af37;
+
+    font-size:2rem;
+
+    margin-bottom:8px;
+}
+
+.titulo-seccion p{
+    color:#888;
+
+    font-size:.95rem;
+}
+
+
+/* =============================== */
+/* TOP JUGADORES */
+/* =============================== */
+
+.top-jugadores{
+    width:100%;
+
+    max-width:1000px;
+
+    text-align:center;
+}
+
+.top-jugadores h2{
+    color:#d4af37;
+
+    margin-bottom:25px;
+
+    font-size:1.6rem;
+}
+
+
+/* =============================== */
+/* PODIO */
+/* =============================== */
+/* =============================== */
+/* PODIO */
+/* =============================== */
+
+.podio{
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:flex-end;
+
+    gap:25px;
+}
+
+
+/* =============================== */
+/* TARJETAS */
+/* =============================== */
+
+.mejor-jugador{
+    width:270px;
+
+    background:#111;
+
+    border:2px solid #333;
+
+    border-radius:12px;
+
+    padding:20px;
+
+    text-align:center;
+
+    transition:.3s;
+
+    box-shadow:0 0 12px rgba(212,175,55,.12);
+}
+
+.mejor-jugador:hover{
+    transform:translateY(-6px);
+
+    border-color:#d4af37;
+
+    box-shadow:0 0 22px rgba(212,175,55,.35);
+}
+
+
+/* =============================== */
+/* 3.º - IZQUIERDA */
+/* =============================== */
+
+.mejor-jugador.tercero{
+    order:1;
+}
+
+
+/* =============================== */
+/* 1.º - CENTRO */
+/* =============================== */
+
+.mejor-jugador.primero{
+    order:2;
+
+    border-color:#d4af37;
+
+    transform:translateY(-15px);
+
+    box-shadow:0 0 25px rgba(212,175,55,.3);
+}
+
+.mejor-jugador.primero:hover{
+    transform:translateY(-21px);
+}
+
+
+/* =============================== */
+/* 2.º - DERECHA */
+/* =============================== */
+
+.mejor-jugador.segundo{
+    order:3;
+}
+
+
+/* =============================== */
+/* TARJETAS */
+/* =============================== */
+
+.mejor-jugador{
+    width:270px;
+
+    background:#111;
+
+    border:2px solid #333;
+
+    border-radius:12px;
+
+    padding:20px;
+
+    text-align:center;
+
+    transition:.3s;
+
+    box-shadow:0 0 12px rgba(212,175,55,.12);
+}
+
+.mejor-jugador:hover{
+    transform:translateY(-6px);
+
+    border-color:#d4af37;
+
+    box-shadow:0 0 22px rgba(212,175,55,.35);
+}
+
+
+/* =============================== */
+/* 1.º - CENTRO */
+/* =============================== */
+
+.mejor-jugador.primero{
+    order:2;
+
+    border-color:#d4af37;
+
+    transform:translateY(-15px);
+
+    box-shadow:0 0 25px rgba(212,175,55,.3);
+}
+
+.mejor-jugador.primero:hover{
+    transform:translateY(-21px);
+}
+
+
+/* =============================== */
+/* 2.º - DERECHA */
+/* =============================== */
+
+.mejor-jugador.segundo{
+    order:3;
+}
+
+
+/* =============================== */
+/* 3.º - IZQUIERDA */
+/* =============================== */
+
+.mejor-jugador.tercero{
+    order:1;
+}
+
+
+/* =============================== */
+/* TARJETA MEJOR JUGADOR */
+/* =============================== */
+
+.mejor-jugador{
+    width:270px;
+
+    background:#111;
+
+    border:2px solid #333;
+
+    border-radius:12px;
+
+    padding:20px;
+
+    text-align:center;
+
+    transition:.3s;
+
+    box-shadow:0 0 12px rgba(212,175,55,.12);
+}
+
+.mejor-jugador:hover{
+    transform:translateY(-6px);
+
+    border-color:#d4af37;
+
+    box-shadow:0 0 22px rgba(212,175,55,.35);
+}
+
+
+/* =============================== */
+/* PRIMER PUESTO */
+/* =============================== */
+
+.mejor-jugador.primero{
+    border-color:#d4af37;
+
+    transform:translateY(-15px);
+
+    box-shadow:0 0 25px rgba(212,175,55,.3);
+}
+
+.mejor-jugador.primero:hover{
+    transform:translateY(-21px);
+}
+
+
+/* =============================== */
+/* MEDALLA */
+/* =============================== */
+
+.medalla{
+    font-size:2.5rem;
+
+    margin-bottom:5px;
+}
+
+
+/* =============================== */
+/* PUESTO */
+/* =============================== */
+
+.puesto{
+    color:#888;
+
+    font-size:.85rem;
+
+    margin-bottom:10px;
+}
+
+
+/* =============================== */
+/* FOTO */
+/* =============================== */
+
+.mejor-jugador img{
+    width:120px;
+
+    height:120px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    border:2px solid #d4af37;
+
+    margin-bottom:10px;
+}
+
+
+/* =============================== */
+/* NOMBRE */
+/* =============================== */
+
+.mejor-jugador h3{
+    color:white;
+
+    font-size:1.15rem;
+
+    margin-bottom:5px;
+}
+
+
+/* =============================== */
+/* NÚMERO */
+/* =============================== */
+
+.numero-jugador{
+    color:#d4af37;
+
+    font-weight:bold;
+
+    margin-bottom:5px;
+}
+
+
+/* =============================== */
+/* ESTADÍSTICAS TOP */
+/* =============================== */
+
+.estadistica-top{
+    width:100%;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:5px;
+
+    margin-top:18px;
+}
+
+.estadistica-top div{
+    background:#181818;
+
+    padding:10px 5px;
+
+    border-radius:4px;
+}
+
+.estadistica-top strong{
+    display:block;
+
+    color:#d4af37;
+
+    font-size:1.2rem;
+
+    margin-bottom:3px;
+}
+
+.estadistica-top span{
+    color:#888;
+
+    font-size:.65rem;
+
+    text-transform:uppercase;
+}
+
+
+/* =============================== */
+/* TABLA */
+/* =============================== */
+
+.tabla-seccion{
+    width:100%;
+
+    max-width:1000px;
+}
+
+.tabla-seccion h2{
+    color:#d4af37;
+
+    margin-bottom:18px;
+
+    text-align:center;
+
+    font-size:1.6rem;
+}
+
+
+/* =============================== */
+/* CONTENEDOR TABLA */
+/* =============================== */
+
+.tabla-contenedor{
+    width:100%;
+
+    overflow-x:auto;
+
+    background:#111;
+
+    border:2px solid #d4af37;
+
+    border-radius:10px;
+}
+
+
+/* =============================== */
+/* TABLA */
+/* =============================== */
+
+table{
+    width:100%;
+
+    border-collapse:collapse;
+
+    min-width:700px;
+}
+
+
+/* =============================== */
+/* CABECERA TABLA */
+/* =============================== */
+
+thead{
+    background:#181818;
+}
+
+th{
+    color:#d4af37;
+
+    padding:15px;
+
+    text-align:center;
+
+    font-size:.85rem;
+
+    text-transform:uppercase;
+
+    border-bottom:2px solid #333;
+}
+
+
+/* =============================== */
+/* CELDAS */
+/* =============================== */
+
+td{
+    padding:14px 12px;
+
+    text-align:center;
+
+    color:#aaa;
+
+    border-bottom:1px solid #292929;
+}
+
+
+/* =============================== */
+/* FILAS */
+/* =============================== */
+
+tbody tr{
+    transition:.2s;
+}
+
+tbody tr:hover{
+    background:#181818;
+}
+
+tbody tr:last-child td{
+    border-bottom:none;
+}
+
+
+/* =============================== */
+/* NOMBRE EN TABLA */
+/* =============================== */
+
+.nombre-tabla{
+    color:white;
+
+    font-weight:bold;
+
+    text-align:left;
+}
+
+
+/* =============================== */
+/* GOLES */
+/* =============================== */
+
+.goles{
+    color:#d4af37;
+
+    font-weight:bold;
+
+    font-size:1.1rem;
+}
+
+
+/* =============================== */
+/* PARTIDOS */
+/* =============================== */
+
+.partidos{
+    color:#ccc;
+
+    font-weight:bold;
+}
+
+
+/* =============================== */
+/* POSICIÓN */
+/* =============================== */
+
+.posicion-tabla{
+    color:#888;
+}
+
+
+/* =============================== */
+/* FOOTER */
+/* =============================== */
+
+footer{
+    padding:20px;
+
+    text-align:center;
+
+    border-top:2px solid #d4af37;
+
+    background:#000;
+}
+
+footer p{
+    color:#d4af37;
+
+    font-style:italic;
+}
+
+
+/* =============================== */
+/* RESPONSIVE TABLET */
+/* =============================== */
+
+@media(max-width:800px){
+
+    main{
+        padding:30px 20px;
+    }
+
+    .podio{
+        flex-wrap:wrap;
+
+        align-items:center;
+    }
+
+    .mejor-jugador.primero{
+        order:-1;
+
+        transform:none;
+    }
+
+    .mejor-jugador.primero:hover{
+        transform:translateY(-6px);
+    }
+
+}
+
+
+/* =============================== */
+/* RESPONSIVE CELULAR */
+/* =============================== */
+
+@media(max-width:600px){
+
+    .titulo-seccion h2{
+        font-size:1.6rem;
+    }
+
+    .top-jugadores h2{
+        font-size:1.4rem;
+    }
+
+    .podio{
+        flex-direction:column;
+
+        width:100%;
+
+        align-items:center;
+    }
+
+    .mejor-jugador{
+        width:100%;
+
+        max-width:330px;
+    }
+
+    .mejor-jugador.primero{
+        order:-1;
+
+        transform:none;
+    }
+
+    .mejor-jugador.primero:hover{
+        transform:translateY(-6px);
+    }
+
+    .tabla-seccion{
+        width:100%;
+    }
+
+    th,
+    td{
+        padding:12px 8px;
+
+        font-size:.8rem;
+    }
+
+}
+
+
+/* =============================== */
+/* CELULARES PEQUEÑOS */
+/* =============================== */
+
+@media(max-width:400px){
+
+    main{
+        padding:25px 12px;
+    }
+
+    .titulo-seccion h2{
+        font-size:1.4rem;
+    }
+
+    .mejor-jugador{
+        max-width:300px;
+    }
+
+    .mejor-jugador img{
+        width:100px;
+
+        height:100px;
+    }
+
+    .estadistica-top strong{
+        font-size:1rem;
+    }
+
+    .estadistica-top span{
+        font-size:.6rem;
+    }
+
+}

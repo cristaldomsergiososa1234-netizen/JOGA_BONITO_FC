@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Noticias - Joga Bonito FC</title>
+
+    <link rel="stylesheet" href="css/noticias.css">
+</head>
+
+<body>
+
+    <!-- =============================== -->
+    <!-- OVERLAY -->
+    <!-- =============================== -->
+
+    <div class="overlay" id="overlay"></div>
+
+
+    <!-- =============================== -->
+    <!-- MENÚ LATERAL -->
+    <!-- =============================== -->
+
+    <nav class="sidebar" id="sidebar">
+
+        <h2>Joga Bonito FC</h2>
+
+        <ul>
+
+            <li>
+                <a href="menu.html">🏠 Inicio</a>
+            </li>
+
+            <li>
+                <a href="plantel.html">👥 Plantel</a>
+            </li>
+
+            <li>
+                <a href="partidos.html">📅 Partidos</a>
+            </li>
+
+            <li>
+                <a href="torneos.html">🏆 Torneos</a>
+            </li>
+
+            <li>
+                <a href="estadisticas.html">📊 Estadísticas</a>
+            </li>
+
+            <li>
+                <a href="joga_bonito_tv.html">📺 Joga Bonito TV</a>
+            </li>
+
+            <li>
+                <a href="galeria.html">📸 Galería</a>
+            </li>
+
+            <li>
+                <a href="noticias.html">📰 Noticias</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <!-- =============================== -->
+    <!-- HEADER -->
+    <!-- =============================== -->
+
+    <header>
+
+        <div class="menu-btn" id="menuBtn">
+            ☰
+        </div>
+
+        <h1>
+            JOGA BONITO FC
+        </h1>
+
+    </header>
+
+
+    <!-- =============================== -->
+    <!-- CONTENIDO -->
+    <!-- =============================== -->
+
+    <main>
+
+
+        <!-- TÍTULO -->
+
+        <section class="titulo-seccion">
+
+            <h2>
+                📰 Noticias
+            </h2>
+
+            <p>
+                Toda la actualidad de Joga Bonito FC
+            </p>
+
+        </section>
+
+
+        <!-- =============================== -->
+        <!-- NOTICIAS -->
+        <!-- =============================== -->
+
+        <section class="noticias" id="noticias">
+
+
+            <!-- NOTICIA 1 -->
+
+            <article
+                class="noticia"
+                onclick="abrirNoticia(0)"
+            >
+
+                <div class="noticia-imagen">
+
+                    <img
+                        src="img/noticia1.jpg"
+                        alt="Noticia Joga Bonito FC"
+                    >
+
+                </div>
+
+                <div class="noticia-info">
+
+                    <span class="fecha">
+                        29/08/2026
+                    </span>
+
+                    <h3>
+                        Joga Bonito FC vuelve a la cancha
+                    </h3>
+
+                    <p>
+                        Toda la información y novedades del equipo.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- NOTICIA 2 -->
+
+            <article
+                class="noticia"
+                onclick="abrirNoticia(1)"
+            >
+
+                <div class="noticia-imagen">
+
+                    <img
+                        src="img/noticia2.jpg"
+                        alt="Noticia Joga Bonito FC"
+                    >
+
+                </div>
+
+                <div class="noticia-info">
+
+                    <span class="fecha">
+                        25/08/2026
+                    </span>
+
+                    <h3>
+                        Nuevo partido confirmado
+                    </h3>
+
+                    <p>
+                        El equipo se prepara para un nuevo encuentro.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- NOTICIA 3 -->
+
+            <article
+                class="noticia"
+                onclick="abrirNoticia(2)"
+            >
+
+                <div class="noticia-imagen">
+
+                    <img
+                        src="img/noticia3.jpg"
+                        alt="Noticia Joga Bonito FC"
+                    >
+
+                </div>
+
+                <div class="noticia-info">
+
+                    <span class="fecha">
+                        20/08/2026
+                    </span>
+
+                    <h3>
+                        Joga Bonito FC sigue creciendo
+                    </h3>
+
+                    <p>
+                        Nuevas noticias sobre el equipo y sus jugadores.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =============================== -->
+    <!-- FOOTER -->
+    <!-- =============================== -->
+
+    <footer>
+
+        <p>
+            ⚽ Joga Bonito FC — Pasión, equipo y fútbol.
+        </p>
+
+    </footer>
+
+
+    <!-- =============================== -->
+    <!-- MODAL -->
+    <!-- =============================== -->
+
+    <div
+        class="modal"
+        id="modal"
+    >
+
+        <div class="modal-contenido">
+
+            <!-- BOTÓN CERRAR -->
+
+            <button
+                class="cerrar"
+                onclick="cerrarNoticia()"
+            >
+                ×
+            </button>
+
+
+            <!-- IMAGEN -->
+
+            <img
+                id="modalImagen"
+                src=""
+                alt="Noticia"
+            >
+
+
+            <!-- INFORMACIÓN -->
+
+            <div class="modal-texto">
+
+                <span
+                    id="modalFecha"
+                    class="modal-fecha"
+                ></span>
+
+                <h2
+                    id="modalTitulo"
+                ></h2>
+
+                <p
+                    id="modalDescripcion"
+                ></p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =============================== -->
+    <!-- JAVASCRIPT -->
+    <!-- =============================== -->
+
+    <script src="js/noticias.js"></script>
+
+</body>
+
+</html>

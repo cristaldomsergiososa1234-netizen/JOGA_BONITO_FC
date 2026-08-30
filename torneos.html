@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Torneos - Joga Bonito FC</title>
+
+    <link rel="stylesheet" href="css/torneos.css">
+
+</head>
+
+<body>
+
+
+<!-- ================================= -->
+<!-- OVERLAY -->
+<!-- ================================= -->
+
+<div class="overlay" id="overlay"></div>
+
+
+<!-- ================================= -->
+<!-- MENÚ LATERAL -->
+<!-- ================================= -->
+
+<nav class="sidebar" id="sidebar">
+
+    <h2>Joga Bonito FC</h2>
+
+    <ul>
+
+        <li>
+            <a href="menu.html">🏠 Inicio</a>
+        </li>
+
+        <li>
+            <a href="plantel.html">👥 Plantel</a>
+        </li>
+
+        <li>
+            <a href="partidos.html">📅 Partidos</a>
+        </li>
+
+        <li>
+            <a href="torneos.html">🏆 Torneos</a>
+        </li>
+
+        <li>
+            <a href="estadisticas.html">📊 Estadísticas</a>
+        </li>
+
+        <li>
+            <a href="joga_bonito_tv.html">📺 Joga Bonito TV</a>
+        </li>
+
+        <li>
+            <a href="galeria.html">📸 Galería</a>
+        </li>
+
+        <li>
+            <a href="noticias.html">📰 Noticias</a>
+        </li>
+
+    </ul>
+
+</nav>
+
+
+<!-- ================================= -->
+<!-- HEADER -->
+<!-- ================================= -->
+
+<header>
+
+    <div class="menu-btn" id="menuBtn">
+        ☰
+    </div>
+
+    <h1>
+        JOGA BONITO FC
+    </h1>
+
+</header>
+
+
+<!-- ================================= -->
+<!-- CONTENIDO -->
+<!-- ================================= -->
+
+<main>
+
+
+    <!-- ================================= -->
+    <!-- TÍTULO -->
+    <!-- ================================= -->
+
+    <section class="titulo-seccion">
+
+        <h2>
+            🏆 TORNEOS
+        </h2>
+
+        <p>
+            Competencias, resultados y desafíos de Joga Bonito FC
+        </p>
+
+    </section>
+
+
+    <!-- ================================= -->
+    <!-- TORNEOS DONDE PARTICIPA -->
+    <!-- ================================= -->
+
+    <section class="seccion-torneos">
+
+        <div class="titulo-categoria">
+
+            <h2>
+                🏆 Torneos donde participamos
+            </h2>
+
+            <p>
+                Torneos en los que Joga Bonito FC compite.
+            </p>
+
+        </div>
+
+
+        <div class="torneos-container">
+
+
+            <!-- TORNEO 1 -->
+
+            <div class="torneo"
+                 onclick="abrirTorneo(0)">
+
+                <div class="torneo-icono">
+                    🏆
+                </div>
+
+                <div class="torneo-info">
+
+                    <h3>
+                        Torneo Interno 2026
+                    </h3>
+
+                    <p>
+                        📅 Agosto 2026
+                    </p>
+
+                    <p>
+                        📍 Cancha Joga Bonito
+                    </p>
+
+                </div>
+
+                <div class="torneo-estado">
+                    En curso
+                </div>
+
+            </div>
+
+
+            <!-- TORNEO 2 -->
+
+            <div class="torneo"
+                 onclick="abrirTorneo(1)">
+
+                <div class="torneo-icono">
+                    ⚽
+                </div>
+
+                <div class="torneo-info">
+
+                    <h3>
+                        Copa de Invierno
+                    </h3>
+
+                    <p>
+                        📅 Julio 2026
+                    </p>
+
+                    <p>
+                        📍 Complejo Deportivo
+                    </p>
+
+                </div>
+
+                <div class="torneo-estado terminado">
+                    Finalizado
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- ================================= -->
+    <!-- TORNEOS ORGANIZADOS -->
+    <!-- ================================= -->
+
+    <section class="seccion-torneos">
+
+        <div class="titulo-categoria">
+
+            <h2>
+                ⚽ Torneos organizados
+            </h2>
+
+            <p>
+                Competencias organizadas por Joga Bonito FC.
+            </p>
+
+        </div>
+
+
+        <div class="torneos-container">
+
+
+            <!-- TORNEO ORGANIZADO 1 -->
+
+            <div class="torneo"
+                 onclick="abrirTorneo(2)">
+
+                <div class="torneo-icono">
+                    🏟️
+                </div>
+
+                <div class="torneo-info">
+
+                    <h3>
+                        Copa Joga Bonito
+                    </h3>
+
+                    <p>
+                        📅 Septiembre 2026
+                    </p>
+
+                    <p>
+                        📍 Cancha Joga Bonito
+                    </p>
+
+                </div>
+
+                <div class="torneo-estado">
+                    Próximamente
+                </div>
+
+            </div>
+
+
+            <!-- TORNEO ORGANIZADO 2 -->
+
+            <div class="torneo"
+                 onclick="abrirTorneo(3)">
+
+                <div class="torneo-icono">
+                    🥇
+                </div>
+
+                <div class="torneo-info">
+
+                    <h3>
+                        Desafío Joga Bonito
+                    </h3>
+
+                    <p>
+                        📅 Octubre 2026
+                    </p>
+
+                    <p>
+                        📍 Por definir
+                    </p>
+
+                </div>
+
+                <div class="torneo-estado">
+                    Próximamente
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+<!-- ================================= -->
+<!-- MODAL -->
+<!-- ================================= -->
+
+<div class="modal" id="modal">
+
+
+    <div class="modal-contenido">
+
+
+        <!-- CERRAR -->
+
+        <button class="cerrar"
+                onclick="cerrarModal()">
+
+            ×
+
+        </button>
+
+
+        <!-- ================================= -->
+        <!-- CABECERA DEL TORNEO -->
+        <!-- ================================= -->
+
+        <div class="modal-header">
+
+            <div class="modal-icono"
+                 id="modalIcono">
+
+                🏆
+
+            </div>
+
+            <div>
+
+                <h2 id="modalNombre">
+                    Torneo
+                </h2>
+
+                <p id="modalTipo">
+                    Torneo
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================================= -->
+        <!-- INFORMACIÓN -->
+        <!-- ================================= -->
+
+        <div class="datos-torneo">
+
+
+            <div class="dato">
+
+                <span>
+                    Fecha
+                </span>
+
+                <strong id="modalFecha">
+                </strong>
+
+            </div>
+
+
+            <div class="dato">
+
+                <span>
+                    Lugar
+                </span>
+
+                <strong id="modalLugar">
+                </strong>
+
+            </div>
+
+
+            <div class="dato">
+
+                <span>
+                    Estado
+                </span>
+
+                <strong id="modalEstado">
+                </strong>
+
+            </div>
+
+
+            <div class="dato">
+
+                <span>
+                    Equipos
+                </span>
+
+                <strong id="modalEquipos">
+                </strong>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- ================================= -->
+        <!-- POSICIÓN DE JOGA BONITO -->
+        <!-- ================================= -->
+
+        <div class="posicion-joga">
+
+            <h3>
+                📊 Joga Bonito FC
+            </h3>
+
+
+            <div class="estadisticas-joga">
+
+
+                <div>
+                    <span>Posición</span>
+                    <strong id="modalPosicion"></strong>
+                </div>
+
+
+                <div>
+                    <span>PJ</span>
+                    <strong id="modalPJ"></strong>
+                </div>
+
+
+                <div>
+                    <span>PG</span>
+                    <strong id="modalPG"></strong>
+                </div>
+
+
+                <div>
+                    <span>PE</span>
+                    <strong id="modalPE"></strong>
+                </div>
+
+
+                <div>
+                    <span>PP</span>
+                    <strong id="modalPP"></strong>
+                </div>
+
+
+                <div>
+                    <span>GF</span>
+                    <strong id="modalGF"></strong>
+                </div>
+
+
+                <div>
+                    <span>GC</span>
+                    <strong id="modalGC"></strong>
+                </div>
+
+
+                <div>
+                    <span>PTS</span>
+                    <strong id="modalPuntos"></strong>
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+        <!-- ================================= -->
+        <!-- TABLA -->
+        <!-- ================================= -->
+
+        <div class="tabla-container">
+
+            <h3>
+                📋 Tabla de posiciones
+            </h3>
+
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            Pos
+                        </th>
+
+                        <th>
+                            Equipo
+                        </th>
+
+                        <th>
+                            PJ
+                        </th>
+
+                        <th>
+                            PG
+                        </th>
+
+                        <th>
+                            PE
+                        </th>
+
+                        <th>
+                            PP
+                        </th>
+
+                        <th>
+                            GF
+                        </th>
+
+                        <th>
+                            GC
+                        </th>
+
+                        <th>
+                            Pts
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody id="tablaPosiciones">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+
+        <!-- ================================= -->
+        <!-- FIGURA -->
+        <!-- ================================= -->
+
+        <div class="figura">
+
+            <div class="estrella">
+                ⭐
+            </div>
+
+            <div>
+
+                <span>
+                    FIGURA DEL TORNEO
+                </span>
+
+                <strong id="modalFigura">
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================================= -->
+        <!-- DESCRIPCIÓN -->
+        <!-- ================================= -->
+
+        <div class="descripcion">
+
+            <h3>
+                Sobre el torneo
+            </h3>
+
+            <p id="modalDescripcion">
+            </p>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+<script src="js/torneos.js"></script>
+
+</body>
+
+</html>

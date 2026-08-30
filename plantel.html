@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plantel - Joga Bonito FC</title>
+<link rel="stylesheet" href="css/plantel.css">
+</head>
+
+<body>
+
+<div class="overlay" id="overlay"></div>
+
+<nav class="sidebar" id="sidebar">
+    <h2>Joga Bonito FC</h2>
+
+    <ul>
+        <li><a href="menu.html">🏠 Inicio</a></li>
+        <li><a href="plantel.html">👥 Plantel</a></li>
+        <li><a href="partidos.html">📅 Partidos</a></li>
+        <li><a href="torneos.html">🏆 Torneos</a></li>
+        <li><a href="estadisticas.html">📊 Estadísticas</a></li>
+        <li><a href="joga_bonito_tv.html">📺 Joga Bonito TV</a></li>
+        <li><a href="galeria.html">📸 Galería</a></li>
+        <li><a href="noticias.html">📰 Noticias</a></li>
+    </ul>
+</nav>
+
+<header>
+    <div class="menu-btn" id="menuBtn">☰</div>
+    <h1>JOGA BONITO FC</h1>
+</header>
+
+<main>
+
+
+<div class="jugador" onclick="abrirModal(0)">
+    <img src="img/anonimo.jpg" alt="Sergio Sosa">
+    <div class="info">
+        <div class="numero">#1</div>
+        <div class="nombre">Sergio Sosa</div>
+        <div class="posicion">Arquero</div>
+    </div>
+</div>
+
+<div class="jugador" onclick="abrirModal(1)">
+    <img src="img/anonimo.jpg" alt="Manuel Sosa">
+    <div class="info">
+        <div class="numero">#7</div>
+        <div class="nombre">Manuel Sosa</div>
+        <div class="posicion">Ala</div>
+    </div>
+</div>
+
+<div class="jugador" onclick="abrirModal(2)">
+    <img src="img/anonimo.jpg" alt="Hilario Martínez">
+    <div class="info">
+        <div class="numero">#10</div>
+        <div class="nombre">Hilario Martínez</div>
+        <div class="posicion">Pivot</div>
+    </div>
+</div>
+
+<div class="jugador" onclick="abrirModal(3)">
+    <img src="img/anonimo.jpg" alt="Diego Rojas">
+    <div class="info">
+        <div class="numero">#5</div>
+        <div class="nombre">Diego Rojas</div>
+        <div class="posicion">Cierre</div>
+    </div>
+</div>
+
+<div class="jugador" onclick="abrirModal(4)">
+    <img src="img/anonimo.jpg" alt="Edwar Rojas">
+    <div class="info">
+        <div class="numero">#8</div>
+        <div class="nombre">Edwar Rojas</div>
+        <div class="posicion">Ala</div>
+    </div>
+</div>
+
+<div class="jugador" onclick="abrirModal(5)">
+    <img src="img/anonimo.jpg" alt="Luis Amarilla">
+    <div class="info">
+        <div class="numero">#9</div>
+        <div class="nombre">Luis Amarilla</div>
+        <div class="posicion">Pivot</div>
+    </div>
+</div>
+
+
+</main>
+
+<!-- MODAL -->
+
+<div class="modal" id="modal">
+
+    <div class="modal-contenido">
+
+        <button class="cerrar" onclick="cerrarModal()">×</button>
+
+        <!-- FOTO -->
+        <div class="modal-foto">
+            <img id="modalImagen" src="" alt="Jugador">
+        </div>
+
+        <!-- INFORMACIÓN -->
+        <div class="modal-info">
+
+            <div class="modal-numero" id="modalNumero"></div>
+
+            <h2 id="modalNombre"></h2>
+
+            <div class="modal-posicion" id="modalPosicion"></div>
+
+            <div class="datos-jugador">
+
+                <div class="dato">
+                    <span>Apodo</span>
+                    <strong id="modalApodo"></strong>
+                </div>
+
+                <div class="dato">
+                    <span>Edad</span>
+                    <strong id="modalEdad"></strong>
+                </div>
+
+                <div class="dato">
+                    <span>Altura</span>
+                    <strong id="modalAltura"></strong>
+                </div>
+
+                <div class="dato">
+                    <span>Fecha de nacimiento</span>
+                    <strong id="modalNacimiento"></strong>
+                </div>
+
+                <div class="dato">
+                    <span>Pie dominante</span>
+                    <strong id="modalPie"></strong>
+                </div>
+
+                <div class="dato">
+                    <span>Partidos jugados</span>
+                    <strong id="modalPartidos"></strong>
+                </div>
+
+                <div class="dato">
+                    <span>Goles</span>
+                    <strong id="modalGoles"></strong>
+                </div>
+
+                <div class="dato">
+                    <span>Asistencias</span>
+                    <strong id="modalAsistencias"></strong>
+                </div>
+
+            </div>
+
+            <div class="descripcion-jugador">
+
+                <h3>Sobre el jugador</h3>
+
+                <p id="modalDescripcion"></p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="js/plantel.js"></script>
+
+</body>
+</html>

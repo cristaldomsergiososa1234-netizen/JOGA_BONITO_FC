@@ -1,0 +1,736 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+/* =============================== /
+/ BODY /
+/ =============================== */
+
+body{
+
+background:linear-gradient(to bottom,#000,#111);
+
+color:white;
+
+min-height:100vh;
+
+display:flex;
+
+flex-direction:column;
+
+}
+
+/* =============================== /
+/ HEADER /
+/ =============================== */
+
+header{
+
+height:70px;
+
+background:#000;
+
+border-bottom:2px solid #d4af37;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+position:relative;
+
+}
+
+.menu-btn{
+
+position:absolute;
+
+left:20px;
+
+font-size:28px;
+
+cursor:pointer;
+
+color:#d4af37;
+
+}
+
+header h1{
+
+font-size:1.5rem;
+
+color:#d4af37;
+
+letter-spacing:2px;
+
+}
+
+/* =============================== /
+/ MENÚ LATERAL /
+/ =============================== */
+
+.sidebar{
+
+position:fixed;
+
+top:0;
+
+left:-280px;
+
+width:280px;
+
+height:100%;
+
+background:#111;
+
+transition:.3s;
+
+z-index:3000;
+
+border-right:2px solid #d4af37;
+
+}
+
+.sidebar.active{
+
+left:0;
+
+}
+
+.sidebar h2{
+
+color:#d4af37;
+
+text-align:center;
+
+padding:20px;
+
+border-bottom:1px solid #333;
+
+}
+
+.sidebar ul{
+
+list-style:none;
+
+}
+
+.sidebar ul li{
+
+padding:18px 25px;
+
+border-bottom:1px solid #222;
+
+}
+
+.sidebar ul li a{
+
+text-decoration:none;
+
+color:white;
+
+display:block;
+
+}
+
+.sidebar ul li{
+
+background:#222;
+
+}
+
+/* =============================== /
+/ OVERLAY /
+/ =============================== */
+
+.overlay{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+background:rgba(0,0,0,.5);
+
+display:none;
+
+z-index:2500;
+
+}
+
+.overlay.active{
+
+display:block;
+
+}
+
+/* =============================== /
+/ MAIN /
+/ =============================== */
+
+main{
+
+flex:1;
+
+padding:40px 30px;
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+gap:40px;
+
+}
+
+/* =============================== /
+/ TÍTULO /
+/ =============================== */
+
+.titulo-seccion{
+
+width:100%;
+
+max-width:1000px;
+
+text-align:center;
+
+}
+
+.titulo-seccion h2{
+
+color:#d4af37;
+
+font-size:2rem;
+
+margin-bottom:10px;
+
+}
+
+.titulo-seccion p{
+
+color:#888;
+
+font-size:.95rem;
+
+}
+
+/* =============================== /
+/ TRANSMISIÓN /
+/ =============================== */
+
+.transmision{
+
+width:100%;
+
+max-width:1000px;
+
+background:#111;
+
+border:2px solid #d4af37;
+
+border-radius:12px;
+
+overflow:hidden;
+
+box-shadow:0 0 20px rgba(212,175,55,.15);
+
+}
+
+/* =============================== /
+/ TV HEADER /
+/ =============================== */
+
+.tv-header{
+
+padding:14px 20px;
+
+background:#181818;
+
+border-bottom:1px solid #333;
+
+}
+
+.estado-proximamente{
+
+color:#d4af37;
+
+font-size:.85rem;
+
+font-weight:bold;
+
+}
+
+/* =============================== /
+/ PANTALLA /
+/ =============================== */
+
+.pantalla{
+
+min-height:420px;
+
+background:#050505;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+padding:40px;
+
+}
+
+.icono-tv{
+
+font-size:5rem;
+
+margin-bottom:15px;
+
+opacity:.8;
+
+}
+
+.pantalla h2{
+
+color:#d4af37;
+
+font-size:2rem;
+
+margin-bottom:10px;
+
+}
+
+.pantalla p{
+
+color:#888;
+
+max-width:500px;
+
+line-height:1.5;
+
+}
+
+/* =============================== /
+/ INFORMACIÓN TV /
+/ =============================== */
+
+.tv-info{
+
+padding:22px;
+
+border-top:1px solid #333;
+
+}
+
+.tv-info h3{
+
+color:#d4af37;
+
+margin-bottom:8px;
+
+}
+
+.tv-info p{
+
+color:#aaa;
+
+line-height:1.5;
+
+}
+
+/* =============================== /
+/ PRÓXIMA TRANSMISIÓN /
+/ =============================== */
+
+.proxima{
+
+width:100%;
+
+max-width:1000px;
+
+}
+
+.proxima h2{
+
+color:#d4af37;
+
+text-align:center;
+
+margin-bottom:18px;
+
+}
+
+.proxima-card{
+
+background:#111;
+
+border:1px solid #333;
+
+border-left:3px solid #d4af37;
+
+border-radius:8px;
+
+padding:20px;
+
+display:flex;
+
+align-items:center;
+
+gap:20px;
+
+}
+
+.proxima-icono{
+
+font-size:3rem;
+
+}
+
+.proxima-info{
+
+flex:1;
+
+}
+
+.estado{
+
+color:#d4af37;
+
+font-size:.75rem;
+
+font-weight:bold;
+
+}
+
+.proxima-info h3{
+
+margin:5px 0;
+
+color:white;
+
+}
+
+.proxima-info p{
+
+color:#888;
+
+font-size:.9rem;
+
+}
+
+/* =============================== /
+/ ÚLTIMAS TRANSMISIONES /
+/ =============================== */
+
+.ultimas{
+
+width:100%;
+
+max-width:1000px;
+
+}
+
+.ultimas h2{
+
+color:#d4af37;
+
+text-align:center;
+
+margin-bottom:20px;
+
+}
+
+.videos{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:20px;
+
+}
+
+.video-card{
+
+background:#111;
+
+border:2px solid #333;
+
+border-radius:10px;
+
+overflow:hidden;
+
+transition:.3s;
+
+}
+
+.video-card{
+
+transform:translateY(-5px);
+
+border-color:#d4af37;
+
+box-shadow:0 0 18px rgba(212,175,55,.25);
+
+}
+
+/* =============================== /
+/ VIDEO PLACEHOLDER /
+/ =============================== */
+
+.video-placeholder{
+
+height:180px;
+
+background:#050505;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+border-bottom:1px solid #333;
+
+}
+
+.video-placeholder span{
+
+width:55px;
+
+height:55px;
+
+border:2px solid #d4af37;
+
+border-radius:50%;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+color:#d4af37;
+
+font-size:1.5rem;
+
+padding-left:3px;
+
+margin-bottom:10px;
+
+}
+
+.video-placeholder p{
+
+color:#777;
+
+font-size:.85rem;
+
+}
+
+/* =============================== /
+/ VIDEO INFO /
+/ =============================== */
+
+.video-info{
+
+padding:15px;
+
+}
+
+.video-info h3{
+
+color:white;
+
+font-size:1rem;
+
+margin-bottom:7px;
+
+}
+
+.video-info p{
+
+color:#777;
+
+font-size:.85rem;
+
+}
+
+/* =============================== /
+/ FOOTER /
+/ =============================== */
+
+footer{
+
+padding:20px;
+
+text-align:center;
+
+border-top:2px solid #d4af37;
+
+background:#000;
+
+}
+
+footer p{
+
+color:#d4af37;
+
+font-style:italic;
+
+}
+
+/* =============================== /
+/ TABLET /
+/ =============================== */
+
+@media(max-width:800px){
+
+main{
+
+    padding:30px 20px;
+
+}
+
+
+.videos{
+
+    grid-template-columns:1fr 1fr;
+
+}
+
+
+.pantalla{
+
+    min-height:350px;
+
+}
+
+}
+
+/* =============================== /
+/ CELULAR /
+/ =============================== */
+
+@media(max-width:600px){
+
+header h1{
+
+    font-size:1.2rem;
+
+}
+
+
+main{
+
+    padding:30px 15px;
+
+    gap:30px;
+
+}
+
+
+.titulo-seccion h2{
+
+    font-size:1.6rem;
+
+}
+
+
+.pantalla{
+
+    min-height:300px;
+
+    padding:30px 20px;
+
+}
+
+
+.icono-tv{
+
+    font-size:4rem;
+
+}
+
+
+.pantalla h2{
+
+    font-size:1.6rem;
+
+}
+
+
+.proxima-card{
+
+    flex-direction:column;
+
+    text-align:center;
+
+}
+
+
+.videos{
+
+    grid-template-columns:1fr;
+
+}
+
+
+.video-placeholder{
+
+    height:200px;
+
+}
+
+}
+
+/* =============================== /
+/ CELULARES PEQUEÑOS /
+/ =============================== */
+
+@media(max-width:400px){
+
+.sidebar{
+
+    width:250px;
+
+}
+
+
+.titulo-seccion h2{
+
+    font-size:1.4rem;
+
+}
+
+
+.pantalla{
+
+    min-height:280px;
+
+}
+
+
+.icono-tv{
+
+    font-size:3.5rem;
+
+}
+
+}
